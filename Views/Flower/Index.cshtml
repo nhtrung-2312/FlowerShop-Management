@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Showing all";
+}
+
+<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
+    <div>
+        <h3 class="fw-bold mb-3">Flowers</h3>
+    </div>
+    <div class="ms-md-auto py-2 py-md-0">
+        <a asp-action="Add" asp-controller="Flower" class="btn btn-primary btn-round">New flower</a>
+    </div>
+</div>
+
+<div>
+    <table id="flowers" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Image</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    new DataTable('#flowers');
+</script>
+
