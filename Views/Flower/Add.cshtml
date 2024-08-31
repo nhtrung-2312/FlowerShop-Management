@@ -2,16 +2,42 @@
     ViewData["Title"] = "Add flower";
 }
 
-<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
-    <div>
-        <h3 class="fw-bold mb-3">New Flower</h3>
-    </div>
-</div>
+@model FlowerShop_Management.Models.Flowers.Flower;
 
-<div>
-    <form method="post">
-        <div class="form-group">
-            <label></label>
+<form method="post">
+    <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4 justify-content-between">
+        <div>
+            <h3 class="fw-bold mb-3">New Flower</h3>
+            <h6 class="op-7 mb-2">Create new flower for the shop</h6>
         </div>
-    </form>
-</div>
+@*         <div class="progress ms-md-auto w-50" role="progressbar" aria-label="Example with label" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-success" style="width: 33%">33%</div>
+        </div> *@
+        <div class="ms-md-auto py-2 py-md-0">
+            <button type="submit" class="btn btn-primary btn-round">Save changes</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-group">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" asp-for="Name"/>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Price</label>
+            <input type="text" class="form-control" asp-for="Price" />
+        </div>
+        <div class="form-group">
+            <label class="form-label">Stock</label>
+            <input type="number" class="form-control" asp-for="Stock" />
+        </div>
+        <div class="form-group">
+            <label class="form-label">Image</label>
+            <input type="file" class="form-control" asp-for="Image_url" />
+        </div>
+        <div class="form-group">
+            <label class="form-label">Status</label>
+            <input type="text" class="form-control" asp-for="Status" />
+        </div>
+    </div>
+</form>
